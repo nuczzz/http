@@ -26,6 +26,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/nuczzz/gopool"
 )
 
 // Errors introduced by the HTTP server.
@@ -985,6 +987,7 @@ type Server struct {
 	WriteTimeout   time.Duration // maximum duration before timing out write of the response
 	MaxHeaderBytes int           // maximum size of request headers, DefaultMaxHeaderBytes if 0
 	TLSConfig      *tls.Config   // optional TLS config, used by ListenAndServeTLS
+	Pool           gopool.Pool   // goroutine pool of server
 }
 
 // ListenAndServe listens on the TCP network address srv.Addr and then
@@ -1037,7 +1040,11 @@ func (srv *Server) Serve(l net.Listener) error {
 		if err != nil {
 			continue
 		}
-		go c.serve()
+		if srv.Pool == nil {
+			go c.serve()
+		} else {
+			srv.Pool.SubmitTask(func() { c.serve() })
+		}
 	}
 	panic("not reached")
 }

@@ -1,8 +1,5 @@
 package http
 
-// task of goroutine pool
-type Task func()
-
 // Abstract definition of goroutine pool.
 // GoPool is used for http Server:
 // type Server struct {
@@ -31,5 +28,5 @@ type Task func()
 //
 // You can implement GoPool with synchronous or asynchronous.
 type GoPool interface {
-	SubmitTask(Task)
+	SubmitTask(task func()) error
 }

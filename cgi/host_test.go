@@ -9,10 +9,10 @@ package cgi
 import (
 	"bufio"
 	"fmt"
+	"github.com/nuczzz/http"
+	"github.com/nuczzz/http/httptest"
 	"io"
 	"net"
-	"net/http"
-	"net/http/httptest"
 	"os"
 	"os/exec"
 	"path/filepath"

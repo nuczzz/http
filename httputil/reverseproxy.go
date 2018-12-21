@@ -7,10 +7,10 @@
 package httputil
 
 import (
+	"github.com/nuczzz/http"
 	"io"
 	"log"
 	"net"
-	"net/http"
 	"net/url"
 	"strings"
 	"sync"

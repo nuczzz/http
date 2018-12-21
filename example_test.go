@@ -6,9 +6,9 @@ package http_test
 
 import (
 	"fmt"
+	"github.com/nuczzz/http"
 	"io/ioutil"
 	"log"
-	"net/http"
 )
 
 func ExampleHijacker() {

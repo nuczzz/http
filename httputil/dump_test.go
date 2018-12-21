@@ -7,9 +7,9 @@ package httputil
 import (
 	"bytes"
 	"fmt"
+	"github.com/nuczzz/http"
 	"io"
 	"io/ioutil"
-	"net/http"
 	"net/url"
 	"testing"
 )

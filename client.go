@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // HTTP client. See RFC 2616.
-// 
+//
 // This is the high-level Client interface.
 // The low-level implementation is in transport.go.
 
@@ -41,8 +41,8 @@ type Client struct {
 	// which is to stop after 10 consecutive requests.
 	CheckRedirect func(req *Request, via []*Request) error
 
-	// Jar specifies the cookie jar. 
-	// If Jar is nil, cookies are not sent in requests and ignored 
+	// Jar specifies the cookie jar.
+	// If Jar is nil, cookies are not sent in requests and ignored
 	// in responses.
 	Jar CookieJar
 }
@@ -285,7 +285,7 @@ func (c *Client) Post(url string, bodyType string, body io.Reader) (r *Response,
 	return r, err
 }
 
-// PostForm issues a POST to the specified URL, 
+// PostForm issues a POST to the specified URL,
 // with data's keys and values urlencoded as the request body.
 //
 // Caller should close r.Body when done reading from it.
@@ -295,7 +295,7 @@ func PostForm(url string, data url.Values) (r *Response, err error) {
 	return DefaultClient.PostForm(url, data)
 }
 
-// PostForm issues a POST to the specified URL, 
+// PostForm issues a POST to the specified URL,
 // with data's keys and values urlencoded as the request body.
 //
 // Caller should close r.Body when done reading from it.

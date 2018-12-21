@@ -7,11 +7,11 @@ package http_test
 import (
 	"bytes"
 	"fmt"
+	. "github.com/nuczzz/http"
+	"github.com/nuczzz/http/httptest"
 	"io"
 	"io/ioutil"
 	"log"
-	. "net/http"
-	"net/http/httptest"
 	"strconv"
 	"strings"
 	"testing"

@@ -9,10 +9,10 @@ package fcgi
 import (
 	"errors"
 	"fmt"
+	"github.com/nuczzz/http"
+	"github.com/nuczzz/http/cgi"
 	"io"
 	"net"
-	"net/http"
-	"net/http/cgi"
 	"os"
 	"time"
 )

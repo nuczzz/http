@@ -8,11 +8,11 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	. "github.com/nuczzz/http"
+	"github.com/nuczzz/http/httptest"
 	"io"
 	"io/ioutil"
 	"mime/multipart"
-	. "net/http"
-	"net/http/httptest"
 	"net/url"
 	"os"
 	"reflect"
@@ -129,7 +129,7 @@ func TestSetBasicAuth(t *testing.T) {
 }
 
 func TestMultipartRequest(t *testing.T) {
-	// Test that we can read the values and files of a 
+	// Test that we can read the values and files of a
 	// multipart request with FormValue and FormFile,
 	// and that ParseMultipartForm can be called multiple times.
 	req := newTestMultipartRequest(t)

@@ -5,8 +5,8 @@
 package http_test
 
 import (
+	"github.com/nuczzz/http"
 	"io/ioutil"
-	"net/http"
 	"os"
 	"path/filepath"
 	"testing"

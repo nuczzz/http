@@ -12,7 +12,7 @@
 // The handled paths all begin with /debug/pprof/.
 //
 // To use pprof, link this package into your program:
-//	import _ "net/http/pprof"
+//	import _ "github.com/nuczzz/http/pprof"
 //
 // Then use the pprof tool to look at the heap profile:
 //
@@ -36,10 +36,10 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"github.com/nuczzz/http"
 	"html/template"
 	"io"
 	"log"
-	"net/http"
 	"os"
 	"runtime"
 	"runtime/pprof"

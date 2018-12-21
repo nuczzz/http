@@ -10,7 +10,7 @@ package cgi
 
 import (
 	"fmt"
-	"net/http"
+	"github.com/nuczzz/http"
 	"os"
 	"testing"
 )

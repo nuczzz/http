@@ -1058,7 +1058,7 @@ func (srv *Server) Serve(l net.Listener) error {
 //
 //	import (
 //		"io"
-//		"net/http"
+//		"github.com/nuczzz/http"
 //		"log"
 //	)
 //
@@ -1089,7 +1089,7 @@ func ListenAndServe(addr string, handler Handler) error {
 //
 //	import (
 //		"log"
-//		"net/http"
+//		"github.com/nuczzz/http"
 //	)
 //
 //	func handler(w http.ResponseWriter, req *http.Request) {

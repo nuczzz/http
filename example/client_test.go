@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/nuczzz/http"
 	"io/ioutil"
-	"net/http"
+	"sync"
 	"testing"
 	"time"
-	"sync"
 )
 
 func httpGet(url string) string {

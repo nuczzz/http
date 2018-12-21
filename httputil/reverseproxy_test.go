@@ -7,9 +7,9 @@
 package httputil
 
 import (
+	"github.com/nuczzz/http"
+	"github.com/nuczzz/http/httptest"
 	"io/ioutil"
-	"net/http"
-	"net/http/httptest"
 	"net/url"
 	"testing"
 )
